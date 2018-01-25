@@ -1,5 +1,6 @@
 #!/bin/bash
 # By Chunhua Liao, 12/16/2017
+# Intern: Manal Abdalla 01/25/2018
 
 ROSE_INSTALL_PATH=/home/ubuntu/opt/rose_inst/bin
 
@@ -170,9 +171,12 @@ tmp_input="/tmp/test$mypid.$suffix"
 
 echo "$filecontent" > "$tmp_input0"
 # preprocess the file content
-#  is inputed by typing ctrl-v followed by ctrl-m
-# replace  with \n 
-sed -e "s//\n/g" "$tmp_input0" > "$tmp_input"
+# 
+ is inputed by typing ctrl-v followed by ctrl-m
+# replace 
+ with \n 
+sed -e "s/
+/\n/g" "$tmp_input0" > "$tmp_input"
 
 #echo "Debug: Input file is: "$tmp_input" <br />"
 echo "Input file is: <br />"
