@@ -1,0 +1,37 @@
+<!DOCTYPE html <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Test ROSE Web Interface</title>
+    </head>
+    <body>
+
+        <form action="/cgi-bin/dotGenerator.sh" method="post">
+
+        Please provide the following information to run the Dot Graph Generator of ROSE:<br>
+    <br>
+        Step 1/2.
+        Input source code (max size allowed: 20,000 characters, roughly 500 lines)<br>
+
+        <script src="autosize.js"></script>
+        <textarea rows="40" maxlength="20000"  cols="80" name="filecontent">
+        /*A test C program. You can replace this content with yours, within 20,000 character limit (about 500 lines) . */
+        int foo()
+        {
+            int a=0;
+            a+=1;
+            return a;
+        }
+        </textarea><br>
+        Step 2/2: Select suffix of the source code <br>
+        <input type="radio" name="suffix" value="c" checked>.c</input><br>
+        <input type="radio" name="suffix" value="cpp">.cpp (C++11 included)</input><br>
+        <input type="radio" name="suffix" value="f">.f</input><br>
+        <input type="radio" name="suffix" value="f90">.f90</input><br>
+
+        <input type="submit" name="sub" value="Submit"></input>
+        
+        </form>
+    </body>
+</html>
